@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class Umtauschautomat {
+    public int eingGeld;
+    public int zutauschenesgeld;
+    public int x;
+    public Umtauschautomat(){
+        geldeingabe();
+    }
+    public void geldeingabe(){  
+        System.out.println("Wieviel Geld wollen sie getauscht haben?");
+        Scanner input = new Scanner (System.in);
+        zutauschenesgeld = input.nextInt();
+        x = zutauschenesgeld;    
+        while (zutauschenesgeld > 0) {
+            System.out.println("Geben sie ihr zu wechselnes Geld ein.");
+            eingGeld = input.nextInt();
+            if (eingGeld == 500){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else if (eingGeld == 200){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else if (eingGeld == 100){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else if (eingGeld == 50){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else if (eingGeld == 20){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else if (eingGeld == 10){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else if (eingGeld == 5){
+                zutauschenesgeld -= eingGeld;
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+            else{
+                System.out.println("Das ist kein gültiger Geldschein.");
+                System.out.println("noch " + zutauschenesgeld + " €");
+            }
+        }
+        geldausgeben();
+    }
+    public void geldausgeben(){
+        for (int i = 0; i < x; i++) {
+            System.out.println("(1p)");
+        }
+    
+    }
+
+}
